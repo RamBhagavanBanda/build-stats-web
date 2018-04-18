@@ -1,0 +1,21 @@
+extends layout
+
+  
+block content
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    script(src="/javascript/lpasClient.js")
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js")
+    h1= title
+  
+    #Jobs
+    table
+        tr(style='align: center;')
+            th  Job Name
+            th  Pipeline name
+        tr(style='list-style-type: none; vertical-align: top;')
+            td(style='align: right;')
+                thread
+                    ul#ul01(style='list-style-type: none; ')                               
+            td
+                thread
+                    ul#ul02(style='list-style-type: none; ')

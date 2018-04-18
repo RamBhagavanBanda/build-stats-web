@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+#chartType {display:inline-block;margin-right:10px; }
+#startDate {display:inline-block;margin-right:10px; } 
+#endDate {display:inline-block;margin-right:10px; }  
+#durationType {display:inline-block; margin-right:10px; }
+#QuarantineJobName {display:inline-block; margin-right:10px; }
+#cutOffJobName {display:inline-block;margin-right:10px; }

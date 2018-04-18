@@ -1,0 +1,39 @@
+extends layout
+
+  
+block content
+ script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+ script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js") 
+ script(src="/javascript/pipelineCharts.js")
+ script(src="/javascript/pipelineClient.js")
+ script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js")
+ script(src="http://code.highcharts.com/highcharts.js")
+ script(src="http://code.highcharts.com/modules/exporting.js")
+ 
+ h1= title
+ p #{pipelineName}
+ input#pipelineName(type='hidden', value='#{pipelineName}')
+  
+ #chart
+  form(name='myform', action="javascript:void(0);" ) 
+   labe Start Date:
+   Date: input#startDate(type='text')
+   labe End Date:
+   Date: input#endDate(type='text')
+   labe Chart Type:  
+   select#chartType    
+    option(value='PipelineDuration') Pipeline Duration
+    option(value='PipelineDurationByStageName') Pipeline Duration by Stage Name
+    option(value='FailuresByCategory') Failures by categories
+   select#durationType    
+    option(value='COC') Check-in over check-in
+   labe End Job:
+   thread
+    select#cutOffJobName            
+   input#submit(type="button", value='CreateChart', onClick="createChart();return false")
+   
+ #container  
+ 
+ labe#url
+ 
+    

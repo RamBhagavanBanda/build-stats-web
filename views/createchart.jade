@@ -1,0 +1,26 @@
+extends layout
+  
+block content
+ script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+ script(src="/javascript/charts.js") 
+ script(src="/javascript/createchartClient.js") 
+ script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
+ script(src="http://code.highcharts.com/highcharts.js")
+ script(src="http://code.highcharts.com/modules/exporting.js")
+ 
+ //h1= title 
+ p
+  font(size='6') Job: #{params.jobName} 
+
+ input#jobName(type='hidden', value='#{params.jobName}')
+ input#QuarantineJobName(type='hidden', value='#{params.qJobName}')
+ input#chartType(type='hidden', value='#{params.chartType}')
+ input#startDate(type='hidden', value='#{params.startDate}')
+ input#endDate(type='hidden', value='#{params.endDate}')
+ input#durationType(type='hidden', value='#{params.durationType}')
+ input#range(type='hidden', value='#{params.range}')
+ #container   
+ #TotalTestsVsQuarantinedTestContainer 
+ #container4
+ #container4_1
+ 

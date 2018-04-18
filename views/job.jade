@@ -1,0 +1,45 @@
+extends layout
+
+block content
+ //script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js")
+ script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+ script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js")
+ script(src="/javascript/charts.js")
+ script(src="/javascript/jobClient.js")
+ script(src="http://code.highcharts.com/highcharts.js")
+ script(src="http://code.highcharts.com/modules/exporting.js")
+ 
+ //h1= title
+ p
+  font(size='6') Job: #{jobName}
+ input#jobName(type='hidden', value='#{jobName}')
+
+ #chart
+  form(name='myform', action="javascript:void(0);" )
+   labe Start Date:
+   Date: input#startDate(type='text')
+   labe End Date:
+   Date: input#endDate(type='text')
+   labe Chart Type:
+   select#chartType
+    option(value='BuildDuration') Build Duration
+    option(value='BuildGreenPercentage') Build Green %
+    option(value='BuildRedPercentage') Build Red %
+    option(value='TotalNumberOfBuilds') Total Number of builds
+    option(value='TestPassPercentageVsQuarantinedTest') Test Pass % Vs. Quarantined Test
+    option(value='FailuresByCategories') Failures by categories
+   select#durationType
+    option(value='BOB') Build over build
+    option(value='DOD') Day over day
+    option(value='WOW') Week over week
+   labe#QuarantineJobNamel QuarantineJobName:
+   input#QuarantineJobName(type='text', name="other")
+   input#submit(type="button", value='CreateChart', onClick="createChart();return false")
+ 
+ #container
+ #TotalTestsVsQuarantinedTestContainer
+ #container4
+ #container4_1
+ 
+ labe#url
+ 
